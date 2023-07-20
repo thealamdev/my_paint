@@ -9,8 +9,7 @@ let sizeBrush = document.querySelector('#range');
 let color = document.querySelector('#color');
 let canvas_clear = document.querySelector('.canvas_clear');
 let download_image = document.querySelector('.download_image');
-let full_button = document.querySelector('.full_screen');
-let full_screen = document.querySelector('.container');
+
 let prevMouseX, prevMouseY, snapshot,
     isDrawing = false,
     selectedTool = 'brush';
@@ -113,10 +112,6 @@ download_image.addEventListener('click', () => {
 })
 
 
-// full screen code:
-full_button.addEventListener('click',()=>{
-    full_screen.requestFullscreen();
-})
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
 canvas.addEventListener('mouseup', () => isDrawing = false)

@@ -54,24 +54,7 @@ body {
 
 }
 
-.full_screen{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 500;
-    padding: 10px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-
-.full_screen:hover{
-    background: rgba(239, 237, 237, 0.458);
-}
+ 
 
 .drawing-board canvas {
     width: 100%;
