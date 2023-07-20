@@ -3,12 +3,14 @@ const canvas = document.querySelector('canvas'),
 let brushWidth = 5;
 let selectedColor = '#000';
 
+
 let toolBtns = document.querySelectorAll('.tool');
 let fillColor = document.querySelector('#checkbox');
 let sizeBrush = document.querySelector('#range');
 let color = document.querySelector('#color');
 let canvas_clear = document.querySelector('.canvas_clear');
 let download_image = document.querySelector('.download_image');
+let canvas_bg = document.querySelector('#bg-color');
 
 let prevMouseX, prevMouseY, snapshot,
     isDrawing = false,
@@ -20,6 +22,8 @@ window.addEventListener('load', function () {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 });
+
+ 
 
 
 const drawRect = (e) => {
@@ -82,6 +86,8 @@ const drawing = function (e) {
 
 }
 
+ 
+
 toolBtns.forEach(btn => {
     btn.addEventListener('click', function () {
         document.querySelector('.options .active').classList.remove('active')
@@ -100,6 +106,12 @@ color.addEventListener('input', function () {
     selectedColor = this.value;
 });
 
+// canvas background color:
+canvas_bg.addEventListener('input', function () {
+    ctx.fillStyle = this.value;
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+})
+
 canvas_clear.addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
@@ -110,6 +122,7 @@ download_image.addEventListener('click', () => {
     link.href = canvas.toDataURL();
     link.click();
 })
+
 
 
 canvas.addEventListener('mousedown', startDrawing);
