@@ -32,11 +32,9 @@ const drawing = function (e) {
 
 toolBtns.forEach(btn => {
     btn.addEventListener('click', function () {
-        // if (btn.contains('.active')) {
-        //     btn.classList.remove('active')
-        // }
+        document.querySelector('.options .active').classList.remove('active')
         btn.classList.add('active');
-
+        console.log(btn.id)
     })
 });
 
