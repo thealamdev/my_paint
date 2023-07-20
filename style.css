@@ -89,4 +89,39 @@ body {
     color:#24bf48 !important;
 }
 
- 
+.canvas_clear_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+} 
+.canvas_clear{
+    padding: 10px 13px;
+    background: transparent;
+    color: #fff;
+    border:1px solid #04558f;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+
+.download_image_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+} 
+.download_image{
+    padding: 10px 13px;
+    background: transparent;
+    color: #fff;
+    border:1px solid #04558f;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+} 

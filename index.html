@@ -43,8 +43,8 @@
                         </li>
 
                         <li class="option">
-                           <input type="checkbox" id="checkbox">
-                           <label for="checkbox">Fill Color</label>
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Fill Color</label>
                         </li>
 
 
@@ -65,17 +65,24 @@
                             <i class="las la-eraser"></i>
                             <span>Eraser</span>
                         </li>
- 
-                        <li class="option tool" id="range">
-                           <input type="range">
-                        </li>
 
                         <li class="option">
+                            <input type="range" id="range">
+                        </li>
+
+                        <li class="option" style="text-align:center">
                             <input type="color" id="color">
-                         </li>
+                        </li>
 
 
                     </ul>
+
+                    <div class="canvas_clear_wrapper">
+                        <button class="canvas_clear">Canvas Clear</button>
+                    </div>
+                    <div class="download_image_wrapper">
+                        <button class="download_image">Save As PNG</button>
+                    </div>
                 </div>
             </div>
 
@@ -91,20 +98,20 @@
     <script src="script.js"></script>
     <script>
         document.addEventListener('contextmenu', function (e) {
-          e.preventDefault();
-        });
-      </script>
-      <script>
-        document.addEventListener('keydown', function (e) {
-          // Disable Ctrl+U and Ctrl+Shift+I
-           
-          if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
             e.preventDefault();
-            alert("👉👌");
-          }
         });
-      </script>
-      
+    </script>
+    <script>
+        document.addEventListener('keydown', function (e) {
+            // Disable Ctrl+U and Ctrl+Shift+I
+
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
+                e.preventDefault();
+                alert("👉👌");
+            }
+        });
+    </script>
+
 </body>
 
 </html>
