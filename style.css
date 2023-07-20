@@ -70,7 +70,7 @@ body {
 }
 
 .full_screen:hover{
-    background: #999;
+    background: rgba(239, 237, 237, 0.458);
 }
 
 .drawing-board canvas {
