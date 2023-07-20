@@ -76,6 +76,7 @@ body {
     list-style: none;
     padding: 10px 20px;
     font-size: 14px;
+    cursor: pointer;
     
 }
 
@@ -83,4 +84,8 @@ body {
     font-size: 16px;
     color: #0a0a0a;
     text-align: center;
+}
+
+.active{
+    color:#2427bf !important;
 }
