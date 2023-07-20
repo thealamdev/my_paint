@@ -14,14 +14,6 @@ let prevMouseX, prevMouseY, snapshot,
     selectedTool = 'brush';
 
 
-
-
-
-
-
-
-
-
 // all funcitons:
 window.addEventListener('load', function () {
     canvas.width = canvas.offsetWidth;
