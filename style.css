@@ -45,12 +45,32 @@ body {
 }
 
 .drawing-board {
+    position: relative;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 85%;
     height: 600px;
     background: #ECF8F9;
 
+}
+
+.full_screen{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.full_screen:hover{
+    background: #999;
 }
 
 .drawing-board canvas {
