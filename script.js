@@ -4,6 +4,8 @@ let brushWidth = 5;
 
 let toolBtns = document.querySelectorAll('.tool');
 let fillColor = document.querySelector('#checkbox');
+let color = document.querySelector('#color').value;
+console.log(color)
 let prevMouseX, prevMouseY, snapshot,
     isDrawing = false,
     selectedTool = 'brush';
@@ -32,11 +34,22 @@ const drawRect = (e) => {
 }
 
 const drawCircle = (e) => {
+     
     ctx.beginPath();
     let radius = Math.sqrt(Math.pow((prevMouseX - e.offsetX),2) + Math.pow((prevMouseY- e.offsetY),2));
     ctx.arc(prevMouseX,prevMouseY,radius,0,2*Math.PI);
     fillColor.checked ? ctx.fill() : ctx.stroke();
+    ctx.fillStyle = "red";
      
+}
+
+const drawTriangle = (e) => {
+    ctx.beginPath();
+    ctx.moveTo(prevMouseX,prevMouseY);
+    ctx.lineTo(e.offsetX,e.offsetY)
+    ctx.lineTo(prevMouseX*2 -e.offsetX,e.offsetY)
+    ctx.closePath();
+    fillColor.checked ? ctx.fill()  : ctx.stroke()
 }
 
 
@@ -67,6 +80,10 @@ const drawing = function (e) {
 
     else if (selectedTool === 'circle') {
         drawCircle(e);
+    }
+
+    else if(selectedTool === 'triangle'){
+        drawTriangle(e);
     }
 
 

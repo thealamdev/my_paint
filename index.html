@@ -70,6 +70,10 @@
                            <input type="range">
                         </li>
 
+                        <li class="option">
+                            <input type="color" id="color">
+                         </li>
+
 
                     </ul>
                 </div>
@@ -85,6 +89,22 @@
 
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+          e.preventDefault();
+        });
+      </script>
+      <script>
+        document.addEventListener('keydown', function (e) {
+          // Disable Ctrl+U and Ctrl+Shift+I
+           
+          if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
+            e.preventDefault();
+            alert("👉👌");
+          }
+        });
+      </script>
+      
 </body>
 
 </html>
