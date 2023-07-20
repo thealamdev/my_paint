@@ -70,7 +70,8 @@ const drawing = function (e) {
     if (!isDrawing) return;
     ctx.putImageData(snapshot, 0, 0);
 
-    if (selectedTool === 'brush') {
+    if (selectedTool === 'brush' || selectedTool === 'eraser') {
+        ctx.strokeStyle = selectedTool === 'eraser' ? '#ECF8F9' : selectedColor;
         ctx.lineTo(e.offsetX, e.offsetY); // drawing line to canvas;
         ctx.stroke();
     }
@@ -85,6 +86,8 @@ const drawing = function (e) {
     else if (selectedTool === 'triangle') {
         drawTriangle(e);
     }
+
+
 
 
 }
