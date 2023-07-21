@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
     canvas.height = canvas.offsetHeight;
 });
 
- 
+
 
 
 const drawRect = (e) => {
@@ -86,7 +86,7 @@ const drawing = function (e) {
 
 }
 
- 
+
 
 toolBtns.forEach(btn => {
     btn.addEventListener('click', function () {
